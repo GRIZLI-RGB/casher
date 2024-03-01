@@ -13,8 +13,8 @@ const UserRole = () => {
 export default function AdminPanelEmployeePage() {
 	return (
 		<section className="border border-[#E4E7EC] rounded-lg font-inter py-[18px] px-6 flex flex-col gap-[18px]">
-			<div className="flex items-start justify-between">
-				<div className="border border-[#E4E7EC] p-3 rounded-lg font-medium leading-[24px] w-[265px]">
+			<div className="flex items-start justify-between lg:flex-col lg:gap-3">
+				<div className="border border-[#E4E7EC] p-3 rounded-lg font-medium leading-[24px] w-[265px] sm:w-full">
 					<div className="flex items-stretch justify-between">
 						<h6>VAIPLI</h6>
 						<div className="bg-[#F2F4F7] rounded-full py-0.5 pl-1.5 pr-2 flex-middle gap-1.5">
@@ -25,18 +25,18 @@ export default function AdminPanelEmployeePage() {
 					<p className="my-0.5">Владелец</p>
 					<p className="text-[14px] opacity-60">ID: 123456789</p>
 				</div>
-				<div className="flex flex-col gap-2.5">
-					<button className="hover:opacity-80 w-[255px] py-[7px] leading-[24px] text-medium font-inter text-white bg-secondary_dark rounded-lg">
+				<div className="flex flex-col gap-2.5 lg:gap-2 lg:w-full">
+					<button className="hover:opacity-80 w-[255px] py-[7px] leading-[24px] text-medium font-inter text-white bg-secondary_dark rounded-lg lg:w-full sm:px-3">
 						Добавить редактора
 					</button>
-					<button className="hover:opacity-80 w-[255px] py-[7px] leading-[24px] text-medium font-inter text-white bg-secondary_dark rounded-lg">
+					<button className="hover:opacity-80 w-[255px] py-[7px] leading-[24px] text-medium font-inter text-white bg-secondary_dark rounded-lg lg:w-full sm:px-3">
 						Добавить администратора
 					</button>
 				</div>
 			</div>
 			<div>
 				<h6 className="font-medium text-[#1570EF] mb-3">Администраторы</h6>
-				<div className="gap-2 flex items-stretch">
+				<div className="gap-2 flex items-stretch flex-wrap">
 					{Array(2)
 						.fill(1)
 						.map((_, index) => (
@@ -46,7 +46,7 @@ export default function AdminPanelEmployeePage() {
 			</div>
 			<div>
 				<h6 className="font-medium text-[#1570EF] mb-3">Редакторы</h6>
-				<div className="gap-2 flex items-stretch">
+				<div className="gap-2 flex items-stretch flex-wrap">
 					{Array(6)
 						.fill(1)
 						.map((_, index) => (

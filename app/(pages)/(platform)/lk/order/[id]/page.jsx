@@ -2,25 +2,25 @@ import Input from "/app/_components/platform/Input";
 
 export default function LkOrderPage({ params }) {
 	return (
-		<section className="flex items-start gap-16">
-			<div className="w-[435px]">
-				<div className="p-3 font-gotham font-medium text-secondary_dark">
+		<section className="flex items-start gap-16 xl:gap-8 md:flex-col">
+			<div className="w-[435px] md:w-full">
+				<div className="p-3 font-gotham font-medium text-secondary_dark md:text-center">
 					<p className="mb-3 text-[20px] uppercase leading-[100%]">Ваш заказ</p>
 					<p>
 						<span className="opacity-60 uppercase">Заказ оформлен:</span>{" "}
 						<span className="pl-3">22.02.2004</span>
 					</p>
 				</div>
-				<div className="rounded-lg border border-black/25 mt-6 text-center font-inter font-medium">
-					<img className="block w-full max-h-[433px] mb-4" src="/img/products/jersy.png" alt="" />
-					<h6 className="text-[#121212] text-[26px]">Jersey AEV2 // AW2023</h6>
-					<p className="my-2 text-[20px] opacity-60">Размер: S</p>
-					<p className="text-[20px] opacity-60">Джерси</p>
+				<div className="rounded-lg border border-black/25 mt-6 text-center font-inter font-medium xl:p-3 md:mt-2">
+					<img className="block w-full max-h-[433px] mb-4 md:object-contain" src="/img/products/jersy.png" alt="" />
+					<h6 className="text-[#121212] text-[26px] md:text-[22px]">Jersey AEV2 // AW2023</h6>
+					<p className="my-2 text-[20px] opacity-60 md:text-[18px]">Размер: S</p>
+					<p className="text-[20px] opacity-60 md:text-[18px]">Джерси</p>
 					<p className="my-6 font-bold text-[24px] leading-[100%]">7 000 р.</p>
 				</div>
 			</div>
 			<div className="pt-3 grow">
-				<p className="mb-3 text-[20px] uppercase leading-[100%] font-gotham font-medium">Ваши контакты</p>
+				<p className="mb-3 text-[20px] uppercase leading-[100%] font-gotham font-medium md:text-center">Ваши контакты</p>
 				<div className="my-6 bg-[#121212]/10 h-0.5" />
 				<div className="flex flex-col gap-2.5 mb-10">
 					<Input label={"Ваш Email"} value={"Александр"} disabled/>

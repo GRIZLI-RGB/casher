@@ -12,7 +12,7 @@ const ITEMS = [...new Array(80)].map((_, index) => ({
 
 const PrevButton = () => {
 	return (
-		<button className="inline-flex items-center gap-2 hover:opacity-80 transition-opacity">
+		<button className="inline-flex items-center gap-2 hover:opacity-80 transition-opacity md:hidden">
 			<img src="/icons/arrow-left.svg" alt="" />
 			Назад
 		</button>
@@ -21,7 +21,7 @@ const PrevButton = () => {
 
 const NextButton = () => {
 	return (
-		<button className="inline-flex items-center gap-2 hover:opacity-80 transition-opacity">
+		<button className="inline-flex items-center gap-2 hover:opacity-80 transition-opacity md:hidden">
 			Вперед
 			<img className="-rotate-180" src="/icons/arrow-left.svg" alt="" />
 		</button>
@@ -42,50 +42,54 @@ export default function AdminPanelLogsPage() {
 
 	return (
 		<section className="font-inter">
-			<table className="mt-6 mb-2.5 w-full">
-				<thead>
-					<tr>
-						<th className="font-gotham font-medium text-[14px] text-secondary_dark/60 py-[14px]">ID</th>
-						<th className="font-gotham font-medium text-[14px] text-secondary_dark/60 py-[14px]">
-							Событие
-						</th>
-						<th className="font-gotham font-medium text-[14px] text-secondary_dark/60 py-[14px]">
-							Инициатор
-						</th>
-						<th className="font-gotham font-medium text-[14px] text-secondary_dark/60 py-[14px]">
-							Дата генерации
-						</th>
-						<th className="font-gotham font-medium text-[14px] text-secondary_dark/60 py-[14px]">
-							Действия
-						</th>
-					</tr>
-				</thead>
-				<tbody>
-					{currentItems.map(item => (
-						<tr className="border-t border-[#E5E5E5]">
-							<td className="py-3 text-center font-semibold text-[14px]">{item.id}</td>
-							<td className="py-3 text-center font-semibold text-[14px]">{item.event}</td>
-							<td className={`py-3 text-center font-semibold text-[14px]`}>
-								<div className={`bg-secondary_dark inline-block text-white text-[12px] px-5 py-1 rounded-full ${item.iniziator === "Владелец" ? "" : ""}`}>
-
-                                    {item.iniziator}
-								</div>
-							</td>
-							<td className="py-3 text-center font-semibold text-[14px]">
-								{item.generated_at.toLocaleDateString()}
-							</td>
-							<td>
-								<img
-									className="block mx-auto hover:opacity-80 transition-opacity cursor-pointer invert-[1]"
-									src="/icons/delete.svg"
-									alt=""
-								/>
-							</td>
+			<div className="lg:w-0 lg:overflow-x-auto lg:min-w-full lg:whitespace-nowrap custom-scrollbar">
+				<table className="mt-6 mb-2.5 w-full lg:min-w-[800px]">
+					<thead>
+						<tr>
+							<th className="font-gotham font-medium text-[14px] text-secondary_dark/60 py-[14px]">ID</th>
+							<th className="font-gotham font-medium text-[14px] text-secondary_dark/60 py-[14px]">
+								Событие
+							</th>
+							<th className="font-gotham font-medium text-[14px] text-secondary_dark/60 py-[14px]">
+								Инициатор
+							</th>
+							<th className="font-gotham font-medium text-[14px] text-secondary_dark/60 py-[14px]">
+								Дата генерации
+							</th>
+							<th className="font-gotham font-medium text-[14px] text-secondary_dark/60 py-[14px]">
+								Действия
+							</th>
 						</tr>
-					))}
-				</tbody>
-			</table>
-			<div className="flex-middle">
+					</thead>
+					<tbody>
+						{currentItems.map(item => (
+							<tr className="border-t border-[#E5E5E5]">
+								<td className="py-3 text-center font-semibold text-[14px]">{item.id}</td>
+								<td className="py-3 text-center font-semibold text-[14px]">{item.event}</td>
+								<td className={`py-3 text-center font-semibold text-[14px]`}>
+									<div
+										className={`bg-secondary_dark inline-block text-white text-[12px] px-5 py-1 rounded-full ${
+											item.iniziator === "Владелец" ? "" : ""
+										}`}>
+										{item.iniziator}
+									</div>
+								</td>
+								<td className="py-3 text-center font-semibold text-[14px]">
+									{item.generated_at.toLocaleDateString()}
+								</td>
+								<td>
+									<img
+										className="block mx-auto hover:opacity-80 transition-opacity cursor-pointer invert-[1]"
+										src="/icons/delete.svg"
+										alt=""
+									/>
+								</td>
+							</tr>
+						))}
+					</tbody>
+				</table>
+			</div>
+			<div className="flex-middle lg:mt-3.5">
 				<ReactPaginate
 					breakClassName="react-paginate-page"
 					breakLinkClassName="react-paginate-link"

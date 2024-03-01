@@ -13,7 +13,7 @@ export default function LkDashboardPage() {
 				Из главной страницы аккаунта вы можете посмотреть ваши недавние заказы, настроить платежный адрес и
 				адрес доставки, а также изменить пароль и основную информацию
 			</p>
-			<nav className="grid grid-cols-3 gap-x-6 gap-y-5">
+			<nav className="grid grid-cols-3 gap-x-6 gap-y-5 md:grid-cols-1">
 				{[
 					{ text: "Заказы", link: "orders" },
 					{ text: "Адреса", link: "addresses" },
