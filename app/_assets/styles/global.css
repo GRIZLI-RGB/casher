@@ -62,6 +62,7 @@ ol {
 	bottom: 0;
 	width: 192px;
 	z-index: 9;
+    pointer-events: none;
 }
 
 .side-shadow-for-slider--left {

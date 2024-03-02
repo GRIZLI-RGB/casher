@@ -1,3 +1,5 @@
+"use client";
+
 import Histories from "/app/_components/platform/Histories";
 import Products from "/app/_components/platform/Products";
 import Lookbook from "/app/_components/platform/Lookbook";

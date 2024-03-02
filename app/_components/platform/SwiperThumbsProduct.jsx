@@ -28,6 +28,16 @@ export default function SwiperThumbsProduct() {
               background: #030303;
               opacity: 1;
             }
+            @media(max-width:768px) {
+                .swiper-pagination {
+                    margin-bottom: 4px;
+                }
+                .swiper-pagination-bullet {
+                    width: 10px;
+                    height: 10px;
+                    border: 1px solid #030303;
+                  }
+            }
             `,
 			],
 			pagination: {
@@ -44,7 +54,7 @@ export default function SwiperThumbsProduct() {
 
 	return (
 		<div className="flex items-start gap-5">
-			<div>
+			<div className="lg:hidden">
 				{Array(4)
 					.fill(1)
 					.map((_, index) => (
@@ -64,13 +74,13 @@ export default function SwiperThumbsProduct() {
 				loop={true}
 				space-between={"0"}
 				slides-per-view="1"
-				class="w-[690px]  rounded-lg border-2 border-dark/15"
+				class="w-[690px] md:w-[90vw] rounded-lg border-2 border-dark/15"
 				pagination={true}>
 				{Array(4)
 					.fill(1)
 					.map((_, index) => (
 						<swiper-slide key={index}>
-							<img className="block" src="/img/products/2.png" alt="" />
+							<img className="block md:w-full" src="/img/products/2.png" alt="" />
 						</swiper-slide>
 					))}
 			</swiper-container>
