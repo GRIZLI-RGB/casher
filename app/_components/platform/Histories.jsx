@@ -19,10 +19,10 @@ export default function Hystories() {
 		<>
 			<section>
 				<h2 className="text-dark font-gotham font-bold text-[32px] uppercase mb-5">Истории</h2>
-				<div className="flex gap-5">
+				<div className="flex gap-5 xl:gap-3 overflow-auto custom-scrollbar-for-histories min-w-full pb-3">
 					{[...new Array(6)].map((_, index) => (
 						<div
-							className="w-[165px] h-[290px] rounded-2xl overflow-hidden relative cursor-pointer group"
+							className="w-[165px] min-w-[165px] h-[290px] rounded-2xl overflow-hidden relative cursor-pointer group"
 							key={index}
 							onClick={() => setHistoryOpen(true)}>
 							<img

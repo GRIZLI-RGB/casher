@@ -153,8 +153,6 @@ export default function ProductPage({ params }) {
 					<div className="side-shadow-for-slider side-shadow-for-slider--left"></div>
 					<swiper-container
 						ref={sliderRef}
-						// slides-per-view="5"
-						// space-between="27"
 						loop={true}
 						autoplay={true}
 						speed={1200}
