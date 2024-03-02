@@ -15,7 +15,7 @@ export default function Input({
 				</label>
 			)}
 			<div className="border border-black/25 rounded-lg h-[56px] p-4 leading-[100%] flex justify-between items-center gap-5">
-				<input className="text-[20px] font-medium text-secondary_dark" type={type} placeholder={placeholder} value={value} disabled={disabled} />
+				<input className="placeholder:text-dark/25 text-[20px] font-medium text-secondary_dark" type={type} placeholder={placeholder} value={value} disabled={disabled} />
 				{add_button && <button className="text-[#174AFF] font-medium text-[20px] relative after:absolute after:left-0 after:right-0 after:-bottom-1 after:bg-[#174AFF] after:h-px hover:opacity-70">{add_button === "track" && "Отследить"}</button>}
 			</div>
 			{secondary_label && (

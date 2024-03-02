@@ -17,6 +17,7 @@ export default function LkDashboardPage() {
 				{[
 					{ text: "Заказы", link: "orders" },
 					{ text: "Адреса", link: "addresses" },
+                    { text: "Аккаунт", link: "account" },
 					{ text: "Выйти", link: "catalog" },
 				].map(({ text, link }) => (
 					<a href={`/lk/${link}`} className="flex-middle flex-col gap-5 rounded-2xl border-2 border-dark/25 h-40  hover:border-dark transition-none" key={text}>

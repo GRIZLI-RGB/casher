@@ -54,7 +54,7 @@ const NAVIGATION_DATA = [
 
 export default function Footer() {
 	return (
-		<footer className="bg-dark text-white font-manrope p-[45px] flex justify-between gap-x-6 gap-y-12 xl:flex-col-reverse xl:p-10">
+		<footer className="bg-dark text-white font-inter p-[45px] flex justify-between gap-x-6 gap-y-12 xl:flex-col-reverse xl:p-10">
 			<nav className="flex gap-[54px] xxl:gap-x-10 xl:items-center xl:justify-center md:flex-col">
 				{NAVIGATION_DATA.map(nav_item => (
 					<ul key={nav_item.title} className="flex flex-col gap-2.5">

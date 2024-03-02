@@ -20,6 +20,7 @@ export default function LkLayout({ children }) {
 						{ text: "Панель управления", link: "dashboard" },
 						{ text: "Заказы", link: "orders" },
 						{ text: "Адреса", link: "addresses" },
+                        { text: "Аккаунт", link: "account" },
 						{ text: "Выйти", link: "catalog" },
 					].map(({ text, link }) => (
 						<a

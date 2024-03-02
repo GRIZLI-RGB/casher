@@ -12,11 +12,8 @@ module.exports = {
 		},
 		extend: {
 			fontFamily: {
-				manrope: "var(--font-manrope)",
 				inter: "var(--font-inter)",
 				gotham: "var(--font-gotham)",
-				halvar: "var(--font-halvar)",
-				montserrat: "var(--font-montserrat)",
 			},
 			colors: {
 				dark: "#030303",

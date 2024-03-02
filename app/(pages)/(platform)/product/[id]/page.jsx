@@ -70,13 +70,13 @@ export default function ProductPage({ params }) {
 							<p className="my-6 font-medium text-[32px] text-dark/60 md:text-[26px] md:my-4">
 								Коллекция: NAME#1
 							</p>
-							<p className="font-manrope">
+							<p className="font-inter">
 								<span className="font-bold text-[38px]">2 800</span>
 								<span className="pl-2 pr-1 font-bold text-[28px]">р.</span>
 								<span className="text-[#585858] line-through text-[21px]">3 500р.</span>
 							</p>
 							<div className="max-w-[413px] xxxl:mx-auto md:max-w-none">
-								<div className="flex items-stretch gap-[22px] font-montserrat font-medium text-[24px] mt-10 md:gap-2 md:justify-center">
+								<div className="flex items-stretch gap-[22px] font-inter font-medium text-[24px] mt-10 md:gap-2 md:justify-center">
 									<div className="text-dark/30 w-[65px] h-[65px] rounded-[4px] bg-dark/15 border-2 border-white/15 flex-middle md:w-14 md:h-14">
 										S
 									</div>
@@ -97,7 +97,7 @@ export default function ProductPage({ params }) {
 									Купить
 								</button>
 							</div>
-							<p className="p-4 bg-dark/5 rounded-[4px] text-[20px] font-manrope font-semibold md:text-[16px]">
+							<p className="p-4 bg-dark/5 rounded-[4px] text-[20px] font-inter font-semibold md:text-[16px]">
 								Новый предзаказ открыт до 10 января. Отправка будет осуществляться в течение 7-10
 								рабочих дней после закрытия предзаказа.
 							</p>

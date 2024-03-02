@@ -53,7 +53,7 @@ export default function SwiperThumbsProduct() {
 	}, []);
 
 	return (
-		<div className="flex items-start gap-5">
+		<div className="flex items-start gap-5 sticky top-10 xxxl:top-0 xxxl:relative">
 			<div className="lg:hidden">
 				{Array(4)
 					.fill(1)

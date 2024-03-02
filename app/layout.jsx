@@ -23,32 +23,9 @@ const gotham = localFont({
 	variable: "--font-gotham",
 });
 
-const halvar = localFont({
-	src: [
-		{
-			path: "./_assets/fonts/Halvar/Medium.woff2",
-			weight: "500",
-			style: "normal",
-		},
-	],
-	variable: "--font-halvar",
-});
-
 const inter = Inter({
 	weight: ["400", "500", "600", "700"],
 	variable: "--font-inter",
-	subsets: ["cyrillic", "cyrillic-ext", "latin", "latin-ext"],
-});
-
-const montserrat = Montserrat({
-	weight: ["500", "700"],
-	variable: "--font-montserrat",
-	subsets: ["cyrillic", "cyrillic-ext", "latin", "latin-ext"],
-});
-
-const manrope = Manrope({
-	weight: ["400", "600", "700", "800"],
-	variable: "--font-manrope",
 	subsets: ["cyrillic", "cyrillic-ext", "latin", "latin-ext"],
 });
 
@@ -56,7 +33,7 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang="ru">
 			<body
-				className={`${inter.variable} ${montserrat.variable} ${halvar.variable} ${gotham.variable} ${manrope.variable}`}>
+				className={`${inter.variable} ${gotham.variable}`}>
 				{children}
 			</body>
 		</html>

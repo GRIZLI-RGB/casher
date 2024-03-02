@@ -40,7 +40,7 @@ export default function Header() {
 				<div className="flex gap-6 sm:gap-3">
 					<img
 						className="hover:opacity-70 cursor-pointer transition-opacity sm:h-7"
-						src="/icons/account.svg"
+						src="/icons/account-in-header.svg"
 						alt="Личный кабинет"
 						onClick={() => {
 							setAuthOpen(true);
