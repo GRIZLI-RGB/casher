@@ -2,20 +2,23 @@
 
 import useOnclickOutside from "react-cool-onclickoutside";
 import Checkbox from "./Checkbox";
+import {useState} from "react";
 
 export default function Auth({ open, setOpen }) {
 	const authRef = useOnclickOutside(() => setOpen(false));
+
+	const [authForm, setAuthForm] = useState("register")
 
 	if (open) {
 		return (
 			<div className="fixed top-0 left-0 bottom-0 right-0 bg-dark/15 z-[999] flex-middle backdrop-blur-[8px]">
 				<div className="bg-white max-w-[318px] mx-auto rounded-lg px-6 py-8 shadow-2xl" ref={authRef}>
 					<h6 className="font-inter text-[18px] text-dark leading-[18px] font-bold text-center">
-						Создайте аккаунт
+						{authForm === "register" ? "Создайте аккаунт" : "Войдите в аккаунт"}
 					</h6>
 					<button className="flex items-center gap-1.5 font-inter font-semibold text-[13px] text-white bg-[#25B0FF] rounded-md px-6 py-2 w-full hover:opacity-80 justify-center mt-6 mb-8 whitespace-nowrap">
 						<img src="/icons/tg.svg" alt="" />
-						Продолжить через телеграмм
+						Продолжить через Телеграмм
 					</button>
 					<div className="flex items-center gap-4 justify-between">
 						<div className="h-px grow bg-dark/30" />
@@ -33,11 +36,11 @@ export default function Auth({ open, setOpen }) {
 							type="text"
 							placeholder="Пароль"
 						/>
-						<input
+						{authForm === "register" && <input
 							className="bg-[#F3F3F3] rounded-[6px] h-10 font-inter text-[13px] placeholder:text-dark text-dark text-center"
 							type="text"
 							placeholder="Повторите пароль"
-						/>
+						/>}
 					</div>
 					<div className="flex items-center justify-between gap-3">
 						<Checkbox label={"Запомнить меня"} />
@@ -46,11 +49,11 @@ export default function Auth({ open, setOpen }) {
 						</button>
 					</div>
 					<button className="mt-4 mb-[18px] bg-dark rounded-[4px] text-center w-full px-5 uppercase font-gotham font-bold text-[14px] leading-[38px] text-white hover:bg-secondary_dark">
-						Создать
+						{authForm === "register" ? "Создать" : "Войти"}
 					</button>
 					<div className="text-center">
-						<a className="opacity-70 font-inter font-medium text-[14px] hover:opacity-80" href="#">
-							Уже есть аккаунт?
+						<a className="opacity-70 font-inter font-medium text-[14px] hover:opacity-80" href="#" onClick={() => setAuthForm(authForm === "register" ? "login" : "register")} >
+							{authForm === "register" ? "Уже есть аккаунт?" : "Нет аккаунта?"}
 						</a>
 					</div>
 				</div>
